@@ -1,0 +1,5 @@
+-- How to configure Command line in Intillij IDEA
+** open Setting (Ctrl + Alt + S) -- Tool Setting 
+** shell path == C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+** Apply -- Ok 
+
