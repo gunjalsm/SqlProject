@@ -3,3 +3,17 @@
 ** shell path == C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 ** Apply -- Ok 
 
+-- How to configure Git 
+** configure OpenSSH -- check openSSh install or not .. In setting - add optional feature -- 
+   set Env System variable -- path == C:\Windows\System32\OpenSSH   -- restart System 
+** for checking OpenSSh == ssh -V
+
+** ssh-keygen -t rsa -b 4096       -- generating ssh key pair 
+** for save file location ENTER -- default location 
+** set password like    == Sa***git***123
+** ssh-add C:\Users\CS\.ssh\id_rsa     -- ssh key added local system
+** cat ~/.ssh/id_rsa.pub           -- to display ssh key 
+** copy this SSH KEY -- Open Github Setting -- add SSH key -- set name -- paste ssh key okk 
+
+  
+
