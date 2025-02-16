@@ -1,0 +1,3 @@
+HDFS: HDFS commands are used to interact with the Hadoop file system, managing directories, files, and disk usage.
+YARN: YARN commands are used for managing the cluster's resources, checking application status, and managing the ResourceManager.
+MapReduce: MapReduce commands are used for running and monitoring Hadoop MapReduce jobs.
