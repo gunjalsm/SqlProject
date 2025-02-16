@@ -1,0 +1,13 @@
+hdfs dfsadmin -report 
+-- display the health report of HDFS , how many space remaining 
+-- configure capacity and live datanodes (name, Hostname)
+
+
+hdfs dfs -ls 
+-- list of files and directories inside the HDFS
+
+hadoop version 
+-- showing which hadoop version installed 
+
+hdfs dfs -df -h 
+-- showing HDFS DFS disk space in readble format ..
