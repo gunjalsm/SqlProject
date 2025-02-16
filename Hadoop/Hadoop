@@ -1,3 +1,44 @@
-HDFS: HDFS commands are used to interact with the Hadoop file system, managing directories, files, and disk usage.
-YARN: YARN commands are used for managing the cluster's resources, checking application status, and managing the ResourceManager.
-MapReduce: MapReduce commands are used for running and monitoring Hadoop MapReduce jobs.
+************************** HADOOP ***************************
+Apache Hadoop is an open-source framework designed for storing and processing large datasets in a distributed computing environment. 
+It was built to handle massive amounts of data and is the backbone for many big data applications. 
+Hadoop provides a reliable, scalable, and efficient way to manage and process data across multiple machines.
+
+** Key Components of Hadoop :-- 
+
+HDFS (Hadoop Distributed File System):
+-- HDFS commands are used to interact with the Hadoop file system, managing directories, files, and disk usage.
+-- HDFS stores large datasets by splitting them into smaller blocks (typically 128 MB).
+-- HDFS is the storage layer of Hadoop, which splits and stores large files across multiple machines (called DataNodes) in a Hadoop cluster.
+-- It is designed to store vast amounts of data across distributed machines and provides fault tolerance by replicating data across multiple nodes.
+The HDFS architecture consists of:
+-- NameNode: The master server that manages the file system metadata (directory structure, files, etc.).
+-- NameNode maintains metadata about files, directories, and blocks, but it does not store actual data.
+-- DataNode: The worker node responsible for storing the actual data blocks.
+-- DataNodes store the actual data and send heartbeat signals to the NameNode to confirm their status.
+
+
+YARN (Yet Another Resource Negotiator):
+-- YARN is the resource management layer of Hadoop. It manages and schedules resources for various applications running in the Hadoop cluster.
+-- YARN commands are used for managing the cluster's resources, checking application status, and managing the ResourceManager.
+-- YARN provides scalability, efficiency, and job monitoring in a multi-user environment.
+It consists of:
+-- ResourceManager: The master daemon responsible for allocating resources to applications.
+                    Manages the cluster's resources, schedules jobs, and ensures fair resource allocation among jobs.
+-- NodeManager: The worker daemon responsible for managing resources on individual nodes.
+                Runs on every worker node in the cluster and manages the resources available on each node.
+
+
+MapReduce:
+-- MapReduce is a programming model used for processing large datasets in a distributed fashion across a Hadoop cluster.
+-- MapReduce allows Hadoop to process vast amounts of data in parallel and across many machines.
+-- MapReduce commands are used for running and monitoring Hadoop MapReduce jobs
+It involves two main functions:
+Map: Breaks the input data into smaller chunks and processes them in parallel.
+Reduce: Aggregates the results from the Map phase into a final output.
+
+
+** Hadoop Common:
+Hadoop Common contains libraries and utilities needed by other Hadoop modules, like HDFS, MapReduce, and YARN.
+It provides the foundational elements for Hadoop's ecosystem.
+-- HDFS: Hadoop Distributed File System 
+   .
