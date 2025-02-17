@@ -1,0 +1,18 @@
+*** EFS -- Elastic File Syatem ***
+
+-- Amazon Elastic File System (Amazon EFS) provides serverless, fully elastic file storage 
+so that we can share file data without provisioning or managing storage capacity and performance.
+--  It is designed to be highly available, durable, and scalable, making it ideal for a wide range of applications
+-- Amazon EFS has a simple web services interface, we can create and configure file systems quickly and easily
+-- Amazon EFS is accessible across most types of Amazon Web Services compute instances, 
+including Amazon EC2, Amazon ECS, Amazon EKS, AWS Lambda, and AWS Fargate.
+
+
+*** How to create EFS :
+-- click on create file system --- name --- select VPC 
+
+*** How to create Access Point 
+-- add File system ID -- User ID & Group ID -- owner User ID & Owner Group ID  all set like same === 1001
+-- add permission 0777
+
+*** Uses 
