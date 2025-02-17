@@ -1,0 +1,24 @@
+********************  AWS - Amazon Web Services ***************
+
+-- Amazon Web Service (AWS) is an internet platform that offers scalable and cost-effective cloud computing services. 
+-- AWS is a commonly used cloud platform that helps companies scale and expand by offering on-demand services such as compute power,
+database storage, and content delivery.
+
+
+****************  What are the key components of AWS? ********************
+The key components of AWS are
+
+1] Route 53
+   -- A DNS web service
+2] Simple E-mail Service (SES)
+   -- It helps you to send email using either a RESTFUL API call or a regular SMTP.
+3] Identity and Access Management (IAM)
+   -- It provides enhanced security and identity management for your AWS account
+4] Simple Storage Device (S3)
+   -- It is a storage device and the most widely used AWS service
+5] Elastic Block Store (EBS)
+   -- It offers persistent storage volumes that attach to EC2 to allow you to persist data past the lifespan of a single Amazon EC2 instance.
+6] AWS Lambda
+   -- Serverless Computing
+7] CloudWatch
+   -- To monitor AWS resources, It allows administrators to view and collect key Also, one can set a notification alarm in case of trouble.
