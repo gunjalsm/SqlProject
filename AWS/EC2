@@ -1,0 +1,12 @@
+** EC2-Instance 
+
+-- EC2 instance is simply a virtual server in Amazon Web Services terminology..
+-- Amazon EC2 provides scalable computing capacity in the AWS Cloud. 
+-- It allows you to launch virtual servers, known as instances, on-demand. 
+-- This helps reduce hardware costs and speeds up application development and deployment..
+-- In memory configuration we can set as different combination of CPU , RAM (MEMORY) ..
+-- we need to select Instance Type for creation time (t2.Small, t2.nano, t2.large)
+-- need to set network configuration , if previously created , then also we can use and create easily ... 
+-- (mostly select TYPE --All trafic ,  port range -- All , protocol - All)
+   ( TYPE- NFS , Protocol - TCP , Port range -- 2049   == For ECS task triggered if needed )
+
