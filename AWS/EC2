@@ -36,6 +36,15 @@ Instances are classified into three categorize.
 -- These instances allow you to bid on unused EC2 capacity at a lower price, which can result in significant cost savings.
 -- Suitable for flexible workloads, such as batch processing, data analysis, and workloads that can be interrupted.
 
+**************** CMD *****************
+
+1]   whoami   == to check current user name 
+2]   aws ec2 describe-security-groups		== describe security group 
+3]   aws ec2 describe-vpcs		== describe VPC groups 
+4]   aws ec2 describe-security-groups		== describe security group 
+4]   df -h 		== to check available space 
+
+
 *************** How to connect with S3 ? **********************
 -- need to create one role in I am console .. give that role all permission like AmazonS3FullAccess
 -- in ec2 need to modify Iam Role 
@@ -87,6 +96,22 @@ Outbound role -- all traffic allows
 -- sudo chmod 755 /mnt/efs
 -- ls /mnt/efs
 
+
+**** How to take snapshot for any instance ***
+
+Go to the EC2 console.
+Select Instances and choose the instance you want to back up.
+Under the Description tab, note the Volume ID of the EBS volumes attached to the instance.
+Create a Snapshot:
+
+Go to the Elastic Block Store > Volumes in the EC2 console.
+Select the volume you want to back up.
+Click Actions > Create Snapshot.
+Provide a description for the snapshot and click Create Snapshot.
+Using AWS CLI to Create a Snapshot:
+You can also create a snapshot using the AWS CLI:
+
+-- aws ec2 create-snapshot --volume-id vol-1234567890abcdef0 --description "My snapshot description"
 
 
 
