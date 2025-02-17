@@ -35,3 +35,58 @@ Instances are classified into three categorize.
 3] Spot instances:--
 -- These instances allow you to bid on unused EC2 capacity at a lower price, which can result in significant cost savings.
 -- Suitable for flexible workloads, such as batch processing, data analysis, and workloads that can be interrupted.
+
+*************** How to connect with S3 ? **********************
+-- need to create one role in I am console .. give that role all permission like AmazonS3FullAccess
+-- in ec2 need to modify Iam Role 
+-- OR --
+Using AWS CONFIGURE 
+in that need to pass following credentials 
+1] AWS Pass key
+2] AWS Secrete Key 
+3] AWS region 
+4] auto like file mode .... no need to set as DEFAULT 
+
+aws s3 ls 
+-- to displays all buckets from s3 
+
+aws s3 ls s3://docker-im
+-- display all inside the Buckets 
+
+** How to copy From S3 to EC2 
+aws s3 cp s3://docker-im/final-image.tar /home/ec2-user/               
+aws s3 cp s3://docker-im/NETWORK/ /home/ec2-user/NETWORK/ --recursive
+
+** How to copy From EC2 to S3 
+aws s3 cp /home/ec2-user/INPUT s3://docker-im/psalogv2/INPUT/ --recursive
+
+
+
+*******************  How to connect EFS *******************
+
+To Access ec2 instance to EFS -- Elastic File System 
+check first security groups in EC2-instance that have appropriate access --
+
+Inbound role 
+(for TCP - 2049 bound , TYPE -- NFS , Protocal -- TCP , Port range -- 2049 ,source -- sg-057710b5b318ef297    (security group)  )
+
+Outbound role -- all traffic allows  
+
+** installing the nc (netcat) utility and checking network connectivity to a specific port
+-- sudo yum install nc -y   
+-- nc -zv [ip-address] 2049
+-- sudo mkdir -p /mnt/efs           ** creating mount path 
+
+-- sudo mount -t nfs -o nfsvers=4.1 [efs DNS NAME]:/ /mnt/efs
+-- sudo mount -t nfs -o nfsvers=4.1 fs-0c2c44cc1d94accea.efs.ap-south-1.amazonaws.com:/ /mnt/efs
+     ( fs-0c2c44cc1d94accea.efs.ap-south-1.amazonaws.com   --   file system DNS)
+	 
+**  change the ownership of the /mnt/efs directory to the ec2-user user and group
+** chown using for change ownership 
+-- sudo chown ec2-user:ec2-user /mnt/efs
+-- sudo chmod 755 /mnt/efs
+-- ls /mnt/efs
+
+
+
+
